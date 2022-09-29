@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"  >
+
+    <title>MyPage</title>
+</head>
+
+<body>
+    <header>
+        <div class="start">
+            <p id="yourName"></p>
+                <p>
+                    <label>Login</label>
+                    <input type="text" id="name">
+                    <input type="button" value="Войти" onclick="sendForm()">
+                </p>
+        </div>
+    </header>
+    <main>	
+		<div class="wrapper">
+			<div class="nav" id="nav">
+				<ul>
+					<button class="button" onclick="openTriangleForm()">Площадь треугольника</button><br>
+					<button class="button" onclick="openStringForm()">Строки</button><br>
+					<button class="button" onclick="openArrayForm()">Массивы</button><br>
+					<button class="button" onclick="openTimerForm()">Таймер</button><br>
+				</ul>
+			</div>
+			<div class="texts">
+				<h4>
+					Изначально JavaScript был создан, чтобы «сделать веб-страницы живыми».<br>
+					Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.<br>
+					Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска.<br>
+					В браузере для JavaScript доступно всё, что связано с манипулированием веб-страницами, взаимодействием с пользователем и веб-сервером.<br><br>
+					Например, в браузере JavaScript может:<br><br>
+
+					<li>Добавлять новый HTML-код на страницу, изменять существующее содержимое, модифицировать стили.</li><br>
+					<li>Реагировать на действия пользователя, щелчки мыши, перемещения указателя, нажатия клавиш.</li><br>
+					<li>Отправлять сетевые запросы на удалённые сервера, скачивать и загружать файлы.</li><br>
+					<li>Получать и устанавливать куки, задавать вопросы посетителю, показывать сообщения.</li><br>
+					<li>Запоминать данные на стороне клиента («local storage»).</li><br>
+
+					В меню представлена небольшая часть возможности работы c JavaScript.
+				</h4>
+			</div>
+		</div>
+		
+		<!------------- Треугольник ---------------->
+		<div class="content" id="Triangle">
+			<h4>Square of triangle</h4>
+			<form>
+				Side №1 <input type="text" size="8" maxlength="8" name="st1"> 
+				Side №2 <input type="text" size="8" maxlength="8" name="st2"> 
+				Side №3 <input type="text" size="8" maxlength="8" name="st3"><br><br>
+				<button type="button" class="btn" onClick="areaOfTriangle(form)">Calculate</button>
+				<button type="reset" class="btn cancel" onclick="closeTriangleForm()">Close</button>
+				Result <input type="text" size="8" maxlength="8" name="res">
+			</form>
+		</div>
+		
+		<!------------- Строки ---------------->
+		<div class="content" id="String">
+            <h4>Compare</h4>
+            <form>
+                <p>String №1
+                    <Input type="text" id="string1"></Input>
+                </p>
+                <p>String №2
+                    <Input type="text" id="string2"></Input>
+                </p>
+                <p>
+                    <input type="button" value="Compare" onclick="compareString()">
+					<input type="button" value="Close" onclick="closeStringForm()">
+                </p>
+            </form>
+            <p id="ans1"></p>
+        </div>
+		
+		<!------------- Массив ---------------->
+		<div class="content" id="Array">
+            <h4>Max and min values from array</h4>
+            <form>
+                <p>Enter array
+                    <input class="input" type="text"></input>
+                    <input class="input" type="text"></input>
+                    <input class="input" type="text"></input>
+                    <input class="input" type="text"></input>
+                    <input class="input" type="text"></input>
+                </p>
+            </form>
+            <button type="button" onclick="calculateMass()">Calculate</button>
+			<button type="button" onclick="closeArrayForm()">Close</button>
+            <p id="ans2a"></p>
+            <p id="ans2b"></p>
+        </div>
+		
+		<!------------- Таймер ---------------->
+		<div class="content" id="Timer">
+            <h2>Timer</h2>
+            <p>
+            <span id="seconds">00</span><span>:</span><span id="tens">00</span>
+            </p>
+            <button id="button-start">Start</button>
+            <button id="button-stop">Stop</button>
+            <button id="button-reset">Zero off</button>
+			<input type="button" value="Close" onclick="closeTimerForm()">
+        </div>
+    </main>
+	<script src="script.js"></script>
+</body>
+
+</html>
